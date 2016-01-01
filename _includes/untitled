@@ -1,0 +1,188 @@
+
+
+    // Sizing
+
+    var f = (function() {
+
+    $('#pl').width($('#page-content-wrapper').width());
+    $('#pl-control').height($('.tn').height() + 30);
+    $('#pl-toggle').width($('#pl-control').width());
+    $('.pl-hack').height($('#pl').height());
+    $('.pl-hack').css( "margin-left", $('#pl-control').width());
+        $('#pl-control').addClass("extracss");
+
+// pin playlist below screen for one sec after load
+
+setTimeout(
+  function() 
+  {
+    $('#pl').css( "bottom", - $('#pl').height());
+  }, 1000);
+});
+
+$(window).load(f);
+$(window).resize(f);
+
+//Darken other UL's on hover
+
+$('.tn').hover(
+    function() {
+        $('.videos #da-thumbs:not(:hover) .tn').css({"-webkit-filter":"brightness(20%)" , "filter":"brightness(0.2)"})
+    },
+    function() {
+        $(".tn").css({"-webkit-filter":"brightness(100%)" , "filter":"brightness(01.0)"});
+    }
+);
+
+//sortable
+
+var sortshit = $(function () {
+    $("#pl #da-thumbs").sortable({
+        cursor: "move"
+    }, {
+        tolerance: "pointer"
+    }, {
+        delay: 150
+    }, {
+        appendTo: 'body'
+    }, {
+        revert: '100'
+    }, {
+        scroll: false
+    }, {
+        receive: function (event, ui) {
+            sortableIn = 1;
+            $(".ui-sortable-helper").css({
+                "opacity": "1.0",
+                "transform": "inherit"
+            });
+        },
+        over: function (event, ui) {
+            sortableIn = 1;
+            $("#pl #da-thumbs").sortable({ revert: '100' });
+            $(".ui-sortable-helper").css({
+                "opacity": "1.0",
+                "transform": "inherit"
+            });
+        },
+        out: function (event, ui) {
+            sortableIn = 0;
+            $("#pl #da-thumbs").sortable({ revert: false });
+            $(".ui-sortable-helper").css({
+                "opacity": "0.3",
+                "transform": "scale(0.8)"
+            });
+        },
+        beforeStop: function (event, ui) {
+            var pos = ui.position,
+                top = pos.top,
+                left = pos.left,
+                item = ui.item,
+                width = item.css("width"),
+                height = item.css("height");
+
+            if (sortableIn == 0) {
+                    ui.item.delay( 2000 ).remove();
+            }
+        }
+    });
+    $("#pl #da-thumbs").disableSelection();
+});
+
+$(window).load(sortshit);
+
+//Playlist toggle
+
+$( "#pl-toggle" ).click(function() {
+  $("#pl").toggleClass( "up" );
+});
+
+
+//Cloning videos to playlist
+
+$('.videos #da-thumbs > li').each( function() {       
+    $(this).hoverdir(); 
+    $(this).find(".add-playlist").on('click', function(ev) { 
+        var $clone = $(this).parent().parent().parent().clone(true);
+        var $newbuttons = "<button class='btn btn-default play' role='button'><div class='arrow-play'></div><p>Play</p></button><button class='btn btn-default delete' role='button'><div class='plus'></div></button>";
+        ev.preventDefault(); 
+        $clone.find('.tn-overlay').css({'top':'100%'}).end().find('.tn-buttons').html($newbuttons).end().addClass('ui-sortable-handle').appendTo( $('#pl #da-thumbs') ).hoverdir(); 
+        if (!$("#pl").hasClass("up")) {
+            $("#pl").addClass( "up" );
+        };
+        $('.pl-hack').height($('#pl').height());
+        if ( $('#pl ul li').length > 4 ) {
+            $('#pl-control').height($('#pl').height());
+        };
+        $('#pl').css( "bottom", - $('#pl').height());
+    });
+} );
+
+$(".add-all").on('click', function (ev) {
+    var $allclone = $(this).parent().parent().parent().children('li').not('.person').clone(true);
+    var $newbuttons = "<button class='btn btn-default play' role='button'><div class='arrow-play'></div><p>Play</p></button><button class='btn btn-default delete' role='button'><div class='plus'></div></button>";
+   $allclone.find('.tn-buttons').html($newbuttons).end().addClass('ui-sortable-handle').appendTo( $('#pl #da-thumbs') ); 
+        if (!$("#pl").hasClass("up")) {
+            $("#pl").addClass( "up" );
+        };
+        $('.pl-hack').height($('#pl').height());
+        if ( $('#pl ul li').length > 4 ) {
+            $('#pl-control').height($('#pl').height());
+        };
+        $('#pl').css( "bottom", - $('#pl').height());
+});
+
+//Delete list-item on click
+
+$(document).on('click', '.delete', function () {
+    $(this).closest('.tn').css({
+                "transform": "scale(0.3)", "opacity": "0.0"
+            }).animate({
+                    fontSize: "3em"
+                }, '500', function () {
+                    $(this).remove();
+                });
+            $('.pl-hack').delay(500).height($('#pl').height());
+            if ( $('ul.ui-sortable li').length < 6 ) {
+            $('#pl-control').height($('.tn').height() + 30);
+        };
+        $('#pl').delay(1000).css( "bottom", - $('#pl').height());
+});
+
+$(document).on('click', '.clear-playlist', function () {
+    $('#pl #da-thumbs li').css({
+                "transform": "scale(0.3)", "opacity": "0.0"
+            }).animate({
+                    fontSize: "3em"
+                }, '500', function () {
+                    $(this).remove();
+                });
+            $('.pl-hack').delay(500).height($('#pl').height());
+            $('#pl-control').height($('.tn').height() + 30);
+            $('#pl').delay(1000).css( "bottom", - $('#pl').height());
+});
+
+$(document).on('click', '.learn-more', function () {
+    $('#wrapper').addClass('more');
+    $('#curtain').animate({
+    opacity: 0.8,
+  }, 400);
+});
+
+$(document).on('click', '#curtain', function () {
+    $('#wrapper').delay( 500 ).removeClass('more');
+    $('#curtain').animate({
+    opacity: 0,
+  }, 300);
+});
+
+// Every fifth video gets class to offset margin
+
+var items = $('.videos li'),
+    start = 0, // first element, counting starts at zero
+    step = 5;
+
+for(var i=start, l=items.length; i<l; i+=step) {
+    items.eq(i).addClass('five');
+}
+  

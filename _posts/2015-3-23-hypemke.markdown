@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "Hype MKE"
+subtitle: "2011"
+date:   2013-1-23 15:27:45
+categories: experiments
+image: /img/home-thumbnails/hypemke-thumb.jpg
+images:
+
+  - url: /img/home-thumbnails/hypemke-thumb.jpg
+---
+
+<div id="hypemke">
+	<a class="navigation-hack page-link" href="/" >< All Projects</a>
+	<div class="hero-section">
+		<div class="wrapper">
+			<div class="beginning">
+				<h1 style="float: left">{{ page.title }}</h1>
+				<p style="float: right">{{ page.subtitle }}</p>
+				<div style="clear: both;"></div>
+			</div>
+			<hr />
+			<div class="text">
+					<div class="left-column column">
+						<p>What does an 18-year old Zach do, in the year after high school after being rejected from the one and only film school he applied to? He secures a design internship at a local studio. Then utilizes these new-found skills and his god-given chutzpah to start Milwaukee's newest online magazine. Hype MKE.</p>
+					</div>
+					<div class="right-column column">
+						<p>The result is as equally impressive as it is embarrassing. It provided an unorthodox opportunity to learn all about the secondary things I thought I might be interested in beyond film. Journalism. Writing. Photography. Business. Graphic Design. Throw all these into a mixing bowl and you get what you see below.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			<div class="photo-grid">
+					<img src="/img/post/hypemke/laptop.png" class="one-photo"/>
+				</div>
+				<div id="hypemke-wrapper">
+				<div class="videoWrapper" style="padding-bottom: 63%">
+							<iframe src="https://player.vimeo.com/video/146833202?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="wrapper">
+			<section>
+				<div class="text">
+					<h4>The Journey</h4>
+					<div class="left-column column">
+						<p>The idea to start an online magazine came from an honest look at how most local news and events websites were run. Generally, all the sites were cluttered, ugly and geared towards the middle-aged or older. There was nothing out there that stimulated the senses and got a young guy like me excited to see what was new in my hometown. Thus an idea was born.</p>
+						<p>Originally, the plan was to grow Hype MKE’s audience into something big and start planting branches of Hype websites in major cities across the country. That never happened.</p>
+					</div>
+					<div class="right-column column">
+						<p>I underestimated how difficult it was to create all original content every week (almost entirely by myself), while actively trying to grow an audience and make ad revenue to sustain a small media business. But still, I hustled and worked my ass off everyday for almost nine months learning invaluable lessons about self-reliance and communication that I wouldn’t have learned otherwise.</p>
+						<p>At the time of it’s closing, Hype MKE had built a small, but loyal fan base. Now, almost four years since the last article was posted on the site, the website still receives around 10k to 20k views every month… Most of them there to read the one and only listacle smack dab on the home page. But still :) </p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="videoWrapper">
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/6AZ_P1SN4Ic?rel=0&controls=0&showinfo=0&modestbranding=1&playsinline=1" frameborder="0" allowfullscreen></iframe>
+				</div>
+	      	</section>
+	      	<hr />
+			<section>
+				<div class="text">
+					<h4>The Article Design</h4>
+					<div class="left-column column">
+						<p>Borrowing from editorial and magazine design, I wanted to bring a sense of visual delight to the news website. Each article would be unique and it’s design would attempt to elevate it’s subject matter to something unexpected and engaging.</p>
+					</div>
+					<div class="right-column column">
+						<p>Disregarding the terrible prose filled with pop culture references and non sequiturs, these nine months of experimentation with design and writing articles laid a foundation to which I could build my future sensibilities on. </p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="slider">
+		       		<div class="flexslider">
+		          		<ul class="slides">
+		          			<li data-thumb="/img/post/hypemke/1.jpg">
+			  	    	    	<img src="/img/post/hypemke/1.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/2.jpg">
+			  	    	    	<img src="/img/post/hypemke/2.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/3.jpg">
+			  	    	    	<img src="/img/post/hypemke/3.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/4.jpg">
+			  	    	    	<img src="/img/post/hypemke/4.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/5.jpg">
+			  	    	    	<img src="/img/post/hypemke/5.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/6.jpg">
+			  	    	    	<img src="/img/post/hypemke/6.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/7.jpg">
+			  	    	    	<img src="/img/post/hypemke/7.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/8.jpg">
+			  	    	    	<img src="/img/post/hypemke/8.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/9.jpg">
+			  	    	    	<img src="/img/post/hypemke/9.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/10.jpg">
+			  	    	    	<img src="/img/post/hypemke/10.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/11.jpg">
+			  	    	    	<img src="/img/post/hypemke/11.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/12.jpg">
+			  	    	    	<img src="/img/post/hypemke/12.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/13.jpg">
+			  	    	    	<img src="/img/post/hypemke/13.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/14.jpg">
+			  	    	    	<img src="/img/post/hypemke/14.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/15.jpg">
+			  	    	    	<img src="/img/post/hypemke/15.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/16.jpg">
+			  	    	    	<img src="/img/post/hypemke/16.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/hypemke/17.jpg">
+			  	    	    	<img src="/img/post/hypemke/17.jpg" />
+			  	    		</li>
+		          		</ul>
+		       		</div>
+		      	</div>
+			</section>
+		</div>
+	</div>
+</div>

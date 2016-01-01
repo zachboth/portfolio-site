@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "The Vanual"
+subtitle: "2015"
+date:   2013-2-23 15:27:45
+categories: experiments
+image: /img/home-thumbnails/vanual-thumb.jpg
+images:
+
+  - url: /img/home-thumbnails/vanual-thumb.jpg
+---
+
+<div id="vanual">
+	<a class="navigation-hack page-link" href="/" >< All Projects</a>
+	<div class="hero-section">
+		<div class="wrapper">
+			<div class="beginning">
+				<h1 style="float: left">{{ page.title }}</h1>
+				<p style="float: right">{{ page.subtitle }}</p>
+				<div style="clear: both;"></div>
+			</div>
+			<hr />
+			<div class="text">
+					<div class="left-column column">
+						<p>Top secret project in the works.</p>
+					</div>
+					<div class="right-column column">
+						<p>At least that's what I tell my friends.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			<div class="photo-grid">
+					<img src="/img/post/vanual/van1.jpg" class="one-photo"/>
+				</div>
+		</div>
+	</div>
+</div>

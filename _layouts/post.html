@@ -2,14 +2,152 @@
 layout: default
 ---
 <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
   <article class="post-content">
     {{ content }}
   </article>
-
 </div>
+
+<div class="PageNavigation">
+  <div class="wrapper">
+
+  <div class="next">
+    <h1>Next Project</h1>
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}">
+<div class="rec-project">
+      <img src="{{ page.previous.image }}" align="center" />
+    <span class="project-text">
+      <h2>{{page.previous.title}}</h2>
+      <h3>{{page.previous.categories}}</h3>
+    </span>
+  </div>
+    </a>
+  {% else %}
+    <a href="{{site.posts.first.url}}">
+      <div class="rec-project">
+ <img src="{{site.posts.first.image}}" align="center" />
+      <span class="project-text">
+      <h2>{{site.posts.first.title}}</h2>
+      <h3>{{site.posts.first.categories}}</h3>
+    </span>
+  </div>
+    </a>
+  {% endif %}
+    </div>
+
+    <div class="prev">
+  <h1>Previous Project</h1>
+    {% if page.next.url %}
+    <a href="{{page.next.url}}">
+      <div class="rec-project">
+      <img src="{{ page.next.image }}" align="center" />
+    <span class="project-text">
+      <h2>{{page.next.title}}</h2>
+      <h3>{{page.next.categories}}</h3>
+    </span>
+  </div>
+    </a>
+  {% else %}
+    <a href="{{site.posts.last.url}}">
+      <div class="rec-project">
+ <img src="{{site.posts.last.image}}" align="center" />
+      <span class="project-text">
+      <h2>{{site.posts.last.title}}</h2>
+      <h3>{{site.posts.last.categories}}</h3>
+    </span>
+  </div>
+    </a>
+  {% endif %}
+    </div>
+  <div style="clear: both;"></div>
+</div>
+</div>
+
+<script>
+// Call & init
+$(document).ready(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    // Adjust the slider
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+    // Bind dragging events
+    drags(cur.find('.handle'), cur.find('.resize'), cur);
+  });
+});
+
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
+
+function drags(dragElement, resizeElement, container) {
+	
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+    
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+    
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+    
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+ 
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+    
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+    	
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      leftValue = moveX + posX - dragWidth;
+      
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+      
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+			
+      // Set the new values for the slider and the handle. 
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+}
+
+$('.resize iframe').width($('.comparison').width());
+$('.resize iframe').height($('.comparison').height());
+
+$( window ).resize(function() {
+  $('.resize iframe').width($('.comparison').width());
+$('.resize iframe').height($('.comparison').height());
+});
+</script>

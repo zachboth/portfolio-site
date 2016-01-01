@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Adventure</title>
+  <meta name="description" content="	&lt; All Projects										Adventure				Ongoing																								I have an inherent love for the outdoors and going on what Urban Dictionary might des...">
+  <meta property="og:image"
+content="http://zachboth.com/img/base-assets/facebook-og.jpg" />
+
+  <link rel="stylesheet" href="/css/main.css">
+   <link rel="stylesheet" href="/css/flexslider.css">
+  <link rel="canonical" href="http://zachboth.com/stills/adventure.html">
+  <link rel="alternate" type="application/rss+xml" title="Zach Both" href="http://zachboth.com/feed.xml" />
+<script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/transit.js"></script>
+
+  <!-- Modernizr -->
+  <script src="/js/modernizr.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Roboto:400,300,500' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+<span class="site-title">
+    <a href="/"><img src="/img/base-assets/both.png" /></a>
+</span>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+  <article class="post-content">
+    <div id="adventure-still">
+	<a class="navigation-hack page-link" href="/">&lt; All Projects</a>
+	<div class="main-content">
+		<div class="wrapper">
+			<div class="beginning">
+				<h1 style="float: left">Adventure</h1>
+				<p style="float: right">Ongoing</p>
+				<div style="clear: both;"></div>
+			</div>
+			<hr />
+			<div class="text">
+					<div class="left-column column">
+						<p>I have an inherent love for the outdoors and going on what Urban Dictionary might describe as “adventures”. Traveling the country full-time for the last six months has given me the opportunity to see places, meet people and do things I’ve always wished for.</p>
+					</div>
+					<div class="right-column column">
+						<p>This collection of photos are the landscapes, portraits and candids from the last few months of my traveling. I’ll continue to update this as time goes on. Or you can follow me on Instagram at @zachboth</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="photo-grid">
+					<img src="/img/post/adventure/6.jpg" class="one-photo" />
+					<img src="/img/post/adventure/10.jpg" class="one-photo" />
+					<img src="/img/post/adventure/8.jpg" class="one-photo" />
+					<div class="two-photos left-column">
+						<img src="/img/post/adventure/1.jpg" class="" />
+					</div>
+					<div class="two-photos right-column">
+						<img src="/img/post/adventure/2.jpg" class="" />
+					</div>
+					<img src="/img/post/adventure/7.jpg" class="one-photo" />
+					<img src="/img/post/adventure/5.jpg" class="one-photo" />
+					<div class="two-photos left-column">
+						<img src="/img/post/adventure/11.jpg" class="" />
+					</div>
+					<div class="two-photos right-column">
+						<img src="/img/post/adventure/12.jpg" class="" />
+					</div>
+					<img src="/img/post/adventure/13.jpg" class="one-photo" />
+					<img src="/img/post/adventure/9.jpg" class="one-photo" />
+				</div>
+		</div>
+	</div>
+</div>
+
+  </article>
+</div>
+
+<div class="PageNavigation">
+  <div class="wrapper">
+
+  <div class="next">
+    <h1>Next Project</h1>
+    
+    <a href="/stills/commercial.html">
+<div class="rec-project">
+      <img src="/img/home-thumbnails/client-thumb.jpg" align="center" />
+    <span class="project-text">
+      <h2>Commercial</h2>
+      <h3>stills</h3>
+    </span>
+  </div>
+    </a>
+  
+    </div>
+
+    <div class="prev">
+  <h1>Previous Project</h1>
+    
+    <a href="/motion/the-whole-system.html">
+      <div class="rec-project">
+      <img src="/img/home-thumbnails/system-thumb.jpg" align="center" />
+    <span class="project-text">
+      <h2>The Whole System - Formlabs</h2>
+      <h3>motion</h3>
+    </span>
+  </div>
+    </a>
+  
+    </div>
+  <div style="clear: both;"></div>
+</div>
+</div>
+
+<script>
+// Call & init
+$(document).ready(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    // Adjust the slider
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+    // Bind dragging events
+    drags(cur.find('.handle'), cur.find('.resize'), cur);
+  });
+});
+
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
+
+function drags(dragElement, resizeElement, container) {
+	
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+    
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+    
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+    
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+ 
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+    
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+    	
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      leftValue = moveX + posX - dragWidth;
+      
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+      
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+			
+      // Set the new values for the slider and the handle. 
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+}
+
+$('.resize iframe').width($('.comparison').width());
+$('.resize iframe').height($('.comparison').height());
+
+$( window ).resize(function() {
+  $('.resize iframe').width($('.comparison').width());
+$('.resize iframe').height($('.comparison').height());
+});
+</script>
+    </div>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31445467-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <script src="/js/flexslider.js"></script>
+
+<script>
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    smoothHeight: true,
+    slideshow: false,
+    controlNav: "thumbnails"
+  });
+});
+</script>
+  </body>
+
+</html>

@@ -1,0 +1,203 @@
+---
+layout: post
+title:  "Introducing the Form 1 plus - Formlabs"
+subtitle: "2014"
+date:   2015-2-23 15:27:45
+categories: motion
+image: /img/home-thumbnails/form1plus-thumb.jpg
+images:
+
+  - url: /img/home-thumbnails/form1plus-thumb.jpg
+---
+
+<div id="form1">
+	<a class="navigation-hack page-link" href="/" >< All Projects</a>
+	<div class="hero-section">
+		<div class="wrapper">
+			<div class="beginning">
+				<h1 style="float: left">{{ page.title }}</h1>
+				<p style="float: right">{{ page.subtitle }}</p>
+				<div style="clear: both;"></div>
+			</div>
+			<hr />
+			<div class="text">
+					<div class="left-column column">
+						<p>Two years after their record-breaking kickstarter, the Formlabs team had acquired enough knowledge about their first generation 3d printer to make some serious changes to the machine. While this new printer would look almost identical on the outside, the inside was completely overhauled, improving reliability, functionality and user experience.</p>
+					</div>
+					<div class="right-column column">
+						<p>As an art director at Formlabs since it’s early days, I was given the opportunity to direct and lead the creation of the main video for this printer's launch. From concept to final deliverable, I was involved in every aspect—just short of signing the checks ;) The end result helped spread the Formlabs gospel and contributed to making the Form 1+ one of the highest selling SLA 3d printers in history.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			<div class="videoWrapper">
+				<iframe src="https://player.vimeo.com/video/97770946?portrait=0" width="1400" height="788" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="wrapper">
+			<section>
+				<div class="text">
+					<h4>The Concept</h4>
+					<div class="left-column column">
+						<p>The Formlabs customer base is about as diverse as it gets. There are engineers, designers, artists, scientists and anything in between all using this one machine. We decided to showcase these different use cases in one long push in that transitions seamlessly between multiple environments. As we slow to a stop, the background fades away and we’re left with just the printer. No distractions. </p>
+					</div>
+					<div class="right-column column">
+						<p>With all these improvements under the hood, the obvious thing to do would be to move inside the printer—Magic School Bus-style—and follow the laser at the speed of light as it completes it’s last print layer. By doing so, we’re introduced to all the improved components and the inner workings of the machine. After the grand tour we are sent back to our original location where we see the finished print in it’s natural environment.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="videoWrapper">
+							<iframe width="853" height="480" src="https://www.youtube.com/embed/Iec-F9CGSsE?rel=0&controls=0&showinfo=0&loop=1&modestbranding=1&playsinline=1&autoplay=1&playlist=Iec-F9CGSsE" frameborder="0" allowfullscreen></iframe>
+						</div>
+			</section>
+			<hr />
+			<section>
+				<div class="text">
+					<h4>The Shoot</h4>
+					<div class="left-column column">
+						<p>The delightful Never Without a Picture crew was brought on to help with the live-action shoot. With their assistance we knocked out five locations in three days for one highly technical shot (in addition to a number of filmed interviews for supplementary case study videos). Each location was dressed the day before and broken down at the end of the day each shooting day. Talk about a tight schedule.</p>
+					</div>
+					<div class="right-column column">
+						<p>Since the transition between environments had to be seamless, upwards of four to five hours was spent perfecting the camera placement and angle at each location before shooting a single second of footage. We were lucky to shoot at our various locations in the order they appeared in the final film. This meant we were able to progressively edit and test the transitions as we progressed through the shoot.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="slider">
+		       		<div class="flexslider">
+		          		<ul class="slides">
+		          			<li data-thumb="/img/post/form1/BTS-4.jpg">
+			  	    	    	<img src="/img/post/form1/BTS-4.jpg" />
+			  	    		</li>
+			            	<li data-thumb="/img/post/form1/BTS-5.jpg">
+			  	    	    	<img src="/img/post/form1/BTS-5.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/BTS-3.jpg">
+			  	    	    	<img src="/img/post/form1/BTS-3.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/BTS-1.jpg">
+			  	    	    	<img src="/img/post/form1/BTS-1.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/BTS-2.jpg">
+			  	    	    	<img src="/img/post/form1/BTS-2.jpg" />
+			  	    		</li>
+		          		</ul>
+		       		</div>
+		      	</div>
+	      	</section>
+			<hr />
+			<section>
+				<div class="text">
+					<h4>The CG</h4>
+					<div class="left-column column">
+						<p>When I pitched the concept of this ad, I included this elaborate CG flying shot through the printer as a pipe dream. It was something I knew we wouldn’t have the time or budget to do, but would be incredibly cool nonetheless. And then Studio Aiko swooped in and made it a reality.
+						</p>
+						<p>Found on Behance, this group of Israeli CG specialists worked their butts off to produce a beautiful and insightful look inside this machine—and all in record time. Having never worked with CG artists before, the process was unfamiliar for me (and I thank Studio Aiko for being patient and understanding).</p>
+					</div>
+					<div class="right-column column">
+						<p>After giving them as many reference photos and videos I could produce, the Aiko guys responded with incredible material and shading tests that blew all our expectations out of the water. </p>
+						<p>
+						Simultaneously, we worked back and forth on developing and refining the movement of the camera and the other moving elements in the scene. The pacing of the CG was done hand-in-hand with the voiceover, and the transition from live-action to CG and back again was coordinated with the live-action team. For most of this two weeks period of intensive CG work, my sleep schedule switched to Israeli time to accomodate faster feedback turnaround and quicker revisions. Fun stuff.
+						</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="videoWrapper" style="padding-bottom: 28.1%;">
+							<iframe width="2680" height="756" src="https://www.youtube.com/embed/FrvZHF1j5Eo?rel=0&controls=0&showinfo=0&VQ=HD720&loop=1&modestbranding=1&playsinline=1&autoplay=1&playlist=FrvZHF1j5Eo" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</section>
+	      	<hr />
+	      	<section>
+					<h4>The Final Look</h4>
+				<div class="slider">
+		       		<div class="flexslider">
+		          		<ul class="slides">
+			            	<li data-thumb="/img/post/form1/beauty-2.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-2.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-3.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-3.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-4.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-4.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-5.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-5.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-6.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-6.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-7.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-7.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-8.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-8.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-9.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-9.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-11.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-11.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-12.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-12.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-14.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-14.jpg" />
+			  	    		</li>
+			  	    		<li data-thumb="/img/post/form1/beauty-15.jpg">
+			  	    	    	<img src="/img/post/form1/beauty-15.jpg" />
+			  	    		</li>
+		          		</ul>
+		       		</div>
+		      	</div>
+	      	</section>
+	      	<hr />
+	      	<section>
+				<div class="text">
+					<h4>Press</h4>
+					<div class="left-column column">
+						<p>
+							TECHCRUNCH: <a href="http://techcrunch.com/2014/06/11/formlabs-just-made-one-of-the-best-3d-printers-better/">Formlabs Just Made One Of The Best 3D Printers Better</a>
+						</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+	      	</section>
+	      	<hr />
+	      	<section>
+				<div class="text">
+					<h4>Project Credit List</h4>
+					<div class="left-column column">
+						<p>
+							CLIENT: Formlabs
+							<br />
+							<br />
+							DIRECTOR: Zach Both
+							<br />
+							PRODUCER/PARTNER IN CRIME: Jenni Milne<br />
+							<br />
+							PRODUCTION COMPANY: Never Without A Picture<br />
+							CREATIVE DIRECTOR: Will Allen<br />
+							CINEMATOGRAPHER: Matt Palmer<br />
+							SET DRESSER: Colin Roddick<br /><br />
+							CG: Studio Aiko<br />
+							PROJECT MANAGER: Ohad Barda<br /><br />
+							COMPOSER: Jonathan Byram<br />
+						</p>
+					</div>
+					<div class="right-column column">
+						<h4>Gear List</h4>
+						<p>
+							CAMERA: Blackmagic 4k Cinema Camera
+							<br />
+							LENS: Rokinon 24mm f/1.4<br /><br />
+							PRIMARY CG SOFTWARE: 3DS Max
+						</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+	      	</section>
+		</div>
+	</div>
+</div>

@@ -1,24 +1,139 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  TEST
-
+<div class="category-container" id="commercials">
+    <img class="title-1" src="img/icons/films.png" />
+    <div class="projects-container">
+  <div class="projects">
+    {% include scroll-down.html %}
+  <h1 class="title-2">Motion</h1>
+    {% for post in site.categories['motion'] %}
+    <a href="{{ post.url }}">
+      <div class="project">
+{% assign image = post.images[0] %}
+      {% include image.html image=image %}
+      <span class="project-text">
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.subtitle }}</h3>
+    </span>
+    </div>
+    </a>
+  {% endfor %}
 </div>
+</div>
+  <div class="overlay">
+    </div>
+</div>
+<div class="category-container" id="photography">
+      <img class="title-1" src="img/icons/photography.png" />
+<div class="projects-container">
+  <div class="projects">
+    {% include scroll-down.html %}
+  <h1 class="title-2">Stills</h1>
+  {% for post in site.categories['stills'] %}
+    <a href="{{ post.url }}">
+      <div class="project">
+{% assign image = post.images[0] %}
+      {% include image.html image=image %}
+      <span class="project-text">
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.subtitle }}</h3>
+    </span>
+  </div>
+    </a>
+  {% endfor %}
+</div>
+</div>
+  <div class="overlay">
+    </div>
+</div>
+<div class="category-container" id="experiments">
+      <img class="title-1" src="img/icons/experiments.png" />
+<div class="projects-container">
+  <div class="projects">
+    {% include scroll-down.html %}
+  <h1 class="title-2">Experiments</h1>
+  {% for post in site.categories['experiments'] %}
+    <a href="{{ post.url }}">
+      <div class="project">
+{% assign image = post.images[0] %}
+      {% include image.html image=image %}
+      <span class="project-text">
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.subtitle }}</h3>
+    </span>
+  </div>
+    </a>
+  {% endfor %}
+</div>
+</div>
+  <div class="overlay">
+    </div>
+</div>
+
+
+
+<script>
+var timer;
+
+$(".category-container").mouseenter(function(){
+   var self = this;
+    timer = setTimeout(function(){
+        $(self).find(".project").each(function(i) {
+    $(this).delay(i*100).transition(
+        {opacity:'1.0', y: '0'}, 200).css("display", "block"); 
+});
+    },250/* <--- the delay */)
+}).mouseleave(function(){
+  var self = this;
+  $(self).find(".project").transition(
+        {opacity:'0'}, 200).transition({y: '20', delay: 200});
+    clearTimeout(timer);
+});
+
+$('.project').hover(
+    function() {
+        $('.projects .project:not(:hover)').css({"-webkit-filter":"brightness(60%)" ,"filter":"brightness(0.6)"})
+    },
+    function() {
+        $(".project").css({"-webkit-filter":"brightness(100%)" ,"filter":"brightness(1.0)"});
+    }
+);
+
+var divs = $('.scroll');
+$('.category-container').on('scroll', function() {
+   var st = $(this).scrollTop();
+   divs.css({ 'opacity' : (1 - st/50) });
+});
+
+$('.category-container').scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 51) {
+    $('.scroll').css({
+            'display': 'none'
+        });
+  } else {
+    $('.scroll').css({
+            'display': 'block'
+        });
+  }
+});
+
+$('.page-content').on('mouseenter','.category-container', function(){
+    var $this   = $(this),
+        $scroll = $this.find('.scroll');
+    if($this.hasScrollBar()){
+        $scroll.css({'visibility':'visible', 'display': 'block'});
+    } else {
+        $scroll.css({'visibility':'hidden', 'display': 'none'});
+    }   
+});
+
+(function ($) {
+    $.fn.hasScrollBar = function () {
+        return this.get(0).scrollHeight > (this.height() + 70);
+    }
+})(jQuery);
+</script>
